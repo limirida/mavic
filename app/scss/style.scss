@@ -26,23 +26,25 @@
             @extend %ubuntu-bold;
         }
 
-        &__btn {
-            color: #fff;
-            padding: 6px 28px;
-            border: 1px solid #fff;
-            border-radius: 3px;
-            text-transform: uppercase;
-            cursor: pointer;
-            background: transparent;
-            margin-left: 10px;
-            transition: all .3s;
 
-            &:hover {
-                color: #000;
-                background-color: #fff;
-            }
+
+    }
+
+    &__btn {
+        color: #fff;
+        padding: 6px 28px;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        text-transform: uppercase;
+        cursor: pointer;
+        background: transparent;
+        margin-left: 10px;
+        transition: all .3s;
+
+        &:hover {
+            color: #000;
+            background-color: #fff;
         }
-
     }
 }
 
@@ -195,48 +197,7 @@
         padding-left: 25px;
     }
 
-    &__item-1,
-    &__item-3 {
-        position: relative;
 
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            background-repeat: no-repeat;
-            background-position: 0 0;
-        }
-    }
-
-    &__item-1 {
-        &::before {
-            height: 47px;
-            width: 245px;
-            background-image: url(../images/line-1.svg);
-            right: -56px;
-            top: 31px;
-        }
-    }
-
-    &__item-3 {
-        &::before {
-            width: 254px;
-            height: 40px;
-            top: 50px;
-            right: -55px;
-            background-image: url(../images/line-3.svg);
-        }
-
-        &::after {
-            top: -70px;
-            right: -54px;
-            width: 463px;
-            height: 62px;
-            background-image: url(../images/line-2.svg);
-        }
-
-
-    }
 
     &__item {
         margin-bottom: 100px;
@@ -246,6 +207,55 @@
         &:nth-child(even) {
             margin-left: 40px;
             transform: translateY(25px);
+        }
+
+        &:nth-child(3) {
+            margin-left: 30px;
+        }
+
+        &:nth-child(4) {
+            margin-left: 60px;
+        }
+
+        &:first-child,
+        &:nth-child(3) {
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                background-repeat: no-repeat;
+                background-position: 0 0;
+            }
+        }
+
+        &:first-child {
+            &::before {
+                height: 47px;
+                width: 245px;
+                background-image: url(../images/line-1.svg);
+                right: -56px;
+                top: 31px;
+            }
+        }
+
+        &:nth-child(3) {
+            &::before {
+                width: 254px;
+                height: 43px;
+                top: 50px;
+                right: -55px;
+                background-image: url(../images/line-3.svg);
+            }
+
+            &::after {
+                top: -70px;
+                right: -54px;
+                width: 463px;
+                height: 62px;
+                background-image: url(../images/line-2.svg);
+            }
         }
     }
 
@@ -300,6 +310,283 @@
     border: 1px solid #fff;
     margin-right: 15px;
     cursor: pointer;
+}
+
+.specification {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 2px;
+    }
+
+    &__item--center {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    &__box {
+        width: 280px;
+        position: relative;
+        margin-top: 10px;
+
+        &::before {
+            content: "";
+            position: absolute;
+        }
+    }
+
+    // &__box-1 {}
+
+    &__box-2 {
+        margin-top: 140px;
+    }
+
+    // &__box-3 {}
+
+    &__box-4 {
+        margin-top: 160px;
+    }
+
+    &__box-1::before {
+        width: 229px;
+        height: 117px;
+        right: -140px;
+        top: 16px;
+        background: url(../images/pointer-1.svg) no-repeat 0 0;
+    }
+
+    &__box-2::before {
+        width: 346px;
+        background-size: cover;
+        right: -300px;
+        top: -45px;
+        height: 81px;
+        background: url(../images/pointer-2.svg) no-repeat 0 0;
+    }
+
+    &__box-3::before {
+        width: 258px;
+        top: 16px;
+        left: -300px;
+        height: 103px;
+        background: url(../images/pointer-3.svg) no-repeat 0 0;
+    }
+
+    &__box-4::before {
+        width: 124px;
+        left: -172px;
+        top: -73px;
+        height: 89px;
+        background: url(../images/pointer-4.svg) no-repeat 0 0;
+    }
+
+    &__box-title {
+        font-size: 21px;
+        line-height: 28px;
+        @extend %ubuntu-bold;
+        margin-bottom: 10px;
+    }
+
+    &__box-text {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+
+.questions {
+    &__items {
+        max-width: 757px;
+        padding-bottom: 15px;
+    }
+
+    &__item {
+        background: rgba(0, 0, 0, 0.3);
+        max-width: 690px;
+        position: relative;
+
+        &:nth-child(3)::before {
+            content: '';
+            position: absolute;
+            width: 319px;
+            height: 125px;
+            top: -33px;
+            right: -386px;
+            background: url(../images/questions-bg.png) no-repeat center;
+        }
+    }
+
+    &__items-title {
+        padding: 20px 10px 20px 40px;
+        position: relative;
+        line-height: 28px;
+        font-size: 21px;
+        @extend %ubuntu-medium;
+        color: rgba(#fff, .8);
+        cursor: pointer;
+        margin-bottom: 4px;
+
+        &::after {
+            content: url('../images/accordion-arrow.svg');
+            position: absolute;
+            width: 72px;
+            height: 67px;
+            background: #ffffff;
+            right: -72px;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__item-text {
+        padding: 0 5px 75px 50px;
+        font-size: 15px;
+        line-height: 22px;
+        margin: 0 0 4px;
+        display: none;
+    }
+
+    &__item.questions__item--active {
+        .questions__items-title::after {
+            transform: rotate(180deg);
+        }
+
+        .questions__item-text {
+            display: block;
+        }
+    }
+}
+
+.contacts {
+    &__inner {
+        display: flex;
+        padding-left: 25px;
+    }
+
+    &__info {
+        width: 240px;
+        margin-right: 60px;
+    }
+
+    &__info-box {
+        margin-bottom: 30px;
+    }
+
+    &__info-title,
+    &__form-title {
+        line-height: 24px;
+        font-size: 21px;
+        @extend %ubuntu-bold;
+        margin: 0 0 13px;
+    }
+
+    &__info-phone,
+    &__info-email,
+    &__form-text {
+        line-height: 18px;
+        font-size: 15px;
+    }
+
+    &__info-email:hover {
+        text-decoration: underline;
+    }
+
+    &__item {
+        width: 570px;
+        margin-right: 106px;
+    }
+
+    &__form-text {
+        margin: 0 0 12px;
+    }
+
+    &__form-line {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__form-textarea,
+    &__form-input {
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        padding: 15px;
+        @extend %ubuntu-regular;
+        color: #fff;
+
+        &::placeholder {
+            color: rgba(#fff, .4)
+        }
+    }
+
+    &__form-input {
+        width: 49%;
+    }
+
+    &__form-textarea {
+        min-height: 144px;
+        width: 100%;
+        resize: none;
+        margin: 20px 0;
+    }
+
+    &__form-btn {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        @extend %ubuntu-bold;
+        letter-spacing: 0.03em;
+        border: 1px solid #fff;
+        border-radius: 2px;
+        padding: 9px 15px;
+        color: #fff;
+        background: transparent;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+            background: #fff;
+            color: #000;
+        }
+    }
+
+    &__social-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__social-item {
+        margin: 14px 0;
+    }
+
+    &__social-link {
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 32px;
+        left: 0;
+        right: 0;
+
+        &__copy {
+            text-align: right;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 130%;
+            color: #FFFFFF;
+            opacity: 0.64;
+        }
+    }
 }
 
 @import "media";

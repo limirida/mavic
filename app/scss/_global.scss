@@ -55,6 +55,7 @@ body {
     display: flex;
     align-items: flex-end;
     position: relative;
+    min-height: 100vh;
 
     &::before {
         content: "";
