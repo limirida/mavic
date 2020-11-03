@@ -25,9 +25,6 @@
             line-height: 18;
             @extend %ubuntu-bold;
         }
-
-
-
     }
 
     &__btn {
@@ -58,6 +55,18 @@
     }
 }
 
+.header__phone-menu {
+    display: none;
+}
+
+.menu__list-phone {
+    display: none;
+}
+
+.menu__btn {
+    display: none;
+}
+
 .top {
     background-image: url('../images/top-bg.jpg');
 
@@ -84,6 +93,7 @@
         text-align: center;
         align-items: center;
     }
+
 
     &__title {
         font-style: 96px;
@@ -164,7 +174,7 @@
     border: none;
     background: #fff;
     position: absolute;
-    bottom: -45px;
+    bottom: -48px;
     cursor: pointer;
     right: 0;
     z-index: 10;
